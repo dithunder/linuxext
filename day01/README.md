@@ -49,6 +49,7 @@
 - $ packer build centos.json
 - ждем и на выходе в директории /packer получаем файл сentos-8-kernel-6-x86_64-Minimal.box
 - $ vagrant box add centos8-kernel6 centos-8-kernel-6-x86_64-Minimal.box
+
 Создаем виртуальную машину
 - $ vagrant init centos8-kernel6
 - $ vagrant up
@@ -65,3 +66,6 @@
 - $ vagrant cloud publish --release dimkan/centos8-kernel6 1.0 virtualbox centos-8-kernel-6-x86_64-Minimal.box
 
 Загружаем файлы в git
+- $ cd ../..
+- $ git add day01
+- $ git push --
