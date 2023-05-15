@@ -1,0 +1,70 @@
+{
+  "variables": {
+    "artifact_description": "CentOS Stream 8 with kernel 6.x",
+    "artifact_version": "8",
+    "image_name": "centos-8"
+  },
+  "builders": [
+    {
+      "boot_command": [
+        "<tab> inst.text inst.ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter><wait>"
+      ],
+      "boot_wait": "10s",
+      "disk_size": "15000",
+      "export_opts": [
+        "--manifest",
+        "--vsys",
+        "0",
+        "--description",
+        "{{user `artifact_description`}}",
+        "--version",
+        "{{user `artifact_version`}}"
+      ],
+      "headless": true,
+      "guest_os_type": "RedHat_64",
+      "http_directory": "http",
+      "iso_checksum": "017e6f8924248c204fe649403e0fe6896302a6b3c6b5a69968889758d805df26",
+      "iso_url": "http://mirror.linux-ia64.org/centos/8-stream/isos/x86_64/CentOS-Stream-8-20230429.0-x86_64-boot.iso",
+      "name": "{{user `image_name`}}",
+      "output_directory": "builds",
+      "shutdown_command": "echo 'Vagrant' | sudo -S /sbin/halt -h -p",
+      "shutdown_timeout": "5m",
+      "ssh_password": "vagrant",
+      "ssh_port": 22,
+      "ssh_pty": true,
+      "ssh_timeout": "20m",
+      "ssh_username": "vagrant",
+      "type": "virtualbox-iso",
+      "vboxmanage": [
+        [  "modifyvm",  "{{.Name}}",  "--memory",  "2048"  ],
+        [  "modifyvm",  "{{.Name}}",  "--cpus",  "2"  ]
+      ],
+      "vm_name": "packer-centos-vm"
+    }
+  ],
+  "post-processors": [
+    {
+      "compression_level": "7",
+
+      "output": "centos-{{user `artifact_version`}}-kernel-6-x86_64-Minimal.box",
+      "type": "vagrant"
+    }
+  ],
+  "provisioners": [
+    {
+      "execute_command": "{{.Vars}}  echo 'Vagrant' | sudo -S -E bash '{{.Path}}'",
+      "start_retry_timeout": "1m",
+      "expect_disconnect": true,
+      "pause_before": "20s",
+      "override": {
+        "{{user `image_name`}}": {
+          "scripts": [
+            "scripts/stage-1-kernel-update.sh",
+            "scripts/stage-2-clean.sh"
+          ]
+        }
+      },
+      "type": "shell"
+    }
+  ]
+}
