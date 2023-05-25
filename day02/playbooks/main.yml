@@ -1,0 +1,9 @@
+---
+- hosts: all
+
+  pre_tasks:
+    - name: Ensure apt cache is updated.
+      apt: update_cache=true cache_valid_time=600
+
+    - name: Install dependency for pyopenssl.
+      apt: name=libssl-dev state=present
