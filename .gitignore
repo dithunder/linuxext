@@ -1,0 +1,5 @@
+day02/.vagrant/
+day02/disks/
+day02/.*.*
+day02/playbooks/.*.*
+day02/scripts/.*.*
