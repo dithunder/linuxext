@@ -1,10 +1,5 @@
 Домашнее задание
 Работа с mdadm
-
-Описание/Пошаговая инструкция выполнения домашнего задания:
-Ссылка на чат в телеграме: https://t.me/+gOZ5PMsdNoRlZTky
-Для выполнения домашнего задания используйте методичку:
-https://docs.google.com/document/d/1jTq4l4UD1CF9C_VFqGXZYunXA2RUap70CfKm_6OXZBU/edit?usp=share_link
 Что нужно сделать?
 
 - добавить в Vagrantfile еще дисков;
@@ -28,3 +23,8 @@ https://docs.google.com/document/d/1jTq4l4UD1CF9C_VFqGXZYunXA2RUap70CfKm_6OXZBU/
 - VirtualBox 6.1.44
 - Packer 1.6.6.
 - Ansible 2.10.1
+
+Дополнен Vagrantfile.
+- Добавлены диски и их подключение.
+- Добавлен сценарий create-raid.sh который создает рейд 5 из 5 дисков
+* Диски автоматически монтируются после перезагрузки машины
