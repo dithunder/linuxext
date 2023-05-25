@@ -1,6 +1,6 @@
 MACHINES = {
   :otuslinux => {
-    :box_name => "centos8-kernel6",
+    :box_name => "dimkan/centos8-kernel6",
     :ip_addr => '192.168.56.101',
     :disks => {
       :sata1 => {
