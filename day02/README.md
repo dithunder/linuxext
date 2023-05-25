@@ -30,7 +30,7 @@
 - *Диски автоматически монтируются после перезагрузки машины
 
 Файл mdadm.conf содержит:
-DEVICE partitions
-ARRAY /dev/md0 level=raid5 num-devices=5 metadata=1.2 spares=1 name=otuslinux:0 UUID=2682b2f9:4f251e36:1dfb3bf4:69bb0b80
+- DEVICE partitions
+- ARRAY /dev/md0 level=raid5 num-devices=5 metadata=1.2 spares=1 name=otuslinux:0 UUID=2682b2f9:4f251e36:1dfb3bf4:69bb0b80
 
 
