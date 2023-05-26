@@ -15,4 +15,5 @@ parted /dev/md0 mkpart primary ext4 80% 100%
 for i in $(seq 1 5); do mkfs.ext4 /dev/md0p$i; done
 mkdir -p /raid/part{1,2,3,4,5}
 for i in $(seq 1 5); do mount /dev/md0p$i /raid/part$i; done
+for i in $(seq 1 5); do echo /dev/md0p$i /raid/part$i ext4 defaults 0 0 >> /etc/fstab; done
 cp /var/log/*.* /raid/part3
