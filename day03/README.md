@@ -526,7 +526,8 @@ root@lvm:~\[root@lvm ~]# lvcreate -L 100Mb -s -n home_snap /dev/centos_otus-dnik
 ```bash
 root@lvm:~\[root@lvm ~]# rm -f /home/file{11..20}
 root@lvm:~\[root@lvm ~]# ls /home
-file1  file10  file2  file3  file4  file5  file6  file7  file8  file9  vagrant```
+file1  file10  file2  file3  file4  file5  file6  file7  file8  file9  vagrant
+```
 восстанавливаем удаленные файлы из снашота
 ```bash
 root@lvm:~\[root@lvm ~]# umount /home
