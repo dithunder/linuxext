@@ -493,7 +493,6 @@ root@lvm:~\[root@lvm ~]# mount  /dev/centos_otus-dnik01/l_home /home/
 ```bash
 root@lvm:~\[root@lvm ~]# echo "`blkid | grep var: | awk '{print $2}'` /var ext4 defaults 0 0" >> /etc/fstab
 root@lvm:~\[root@lvm ~]# vi /etc/fstab 
-  ```bash
   # /etc/fstab
   # Created by anaconda on Wed Jun 14 20:09:38 2023
   #
@@ -508,7 +507,6 @@ root@lvm:~\[root@lvm ~]# vi /etc/fstab
   #VAGRANT-END
   UUID="441485bf-1287-4129-b248-28938c774697" /var ext4 defaults 0 0
   UUID="5a19c3a6-6014-4d92-a4d6-42e310f1c22b" /home xfs defaults 0 0
-  ```
 ```
 сгенерируем файлы в **/home** для тестирования восстановления
 ```bash
