@@ -249,9 +249,7 @@ xfsrestore: searching media for dump
 xfsdump: ino map phase 1: constructing initial dump list
 xfsdump: ino map phase 2: skipping (no pruning necessary)
 xfsdump: ino map phase 3: skipping (only one dump stream)
-.
-.
-.
+...
 xfsrestore: searching media for directory dump
 xfsrestore: reading directories
 xfsdump: dumping non-directory files
@@ -371,7 +369,6 @@ Creating journal (4096 blocks): done
 Writing superblocks and filesystem accounting information: 0/8   done
 ```
 Монтируем зеркальный том в каталог **/mnt** и копируем туда каталог **/var**
-
 ```bash
 root@lvm:/boot\[root@lvm boot]# mount /dev/v_var/l_var /mnt/
 
