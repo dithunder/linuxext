@@ -1,0 +1,10 @@
+sudo -i
+yum install tar bzip2 gcc
+yum install kernel-devel
+yum update kernel kernel-headers
+reboot now
+sudo -i
+mkdir /media/cdrom/
+mount /dev/sr0 /media/cdrom/
+sh /media/cdrom/VBoxLinuxAdditions.run
+reboot now

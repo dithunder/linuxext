@@ -1,0 +1,16 @@
+centos copy.json
+day02/.vagrant/
+day02/disks/
+day02/.Vagrantfile*.*
+day02/playbooks/.main*.*
+day02/.vagrant
+.gitexludes
+*.box
+centos1.json
+.vagrant/rgloader/loader.rb
+day03/.*
+day03/disks/
+day0X/
+packer_cache/
+day01/playbooks/main.yml
+day03/.vagrant/
