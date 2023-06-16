@@ -50,7 +50,7 @@
 - ждем и на выходе в директории /packer получаем файл сentos-8-kernel-6-x86_64-Minimal.box
 - $ vagrant box add centos8-kernel6 centos-8-kernel-6-x86_64-Minimal.box
 
-Создаем виртуальную машину
+Проверяем как все отработало. Создаем виртуальную машину
 - $ vagrant init centos8-kernel6
 - $ vagrant up
 - $ vagrant ssh
