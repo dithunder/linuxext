@@ -382,7 +382,7 @@ root@zfs:~\[root@zfs ~]# ls otus_task2.file -la
 ```bash	
 root@zfs:~\[root@zfs ~]# zfs receive otus/test@today < otus_task2.file
 ```	
-ищем серетное сообщение от преподавателя 
+Ищем секретное сообщение от преподавателя 
 ```bash	
 root@zfs:~\[root@zfs ~]# find /otus/test -name "secret_message"
 /otus/test/task1/file_mess/secret_message
