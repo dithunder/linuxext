@@ -57,8 +57,8 @@ $ vagrant up
 $ vagrant ssh
 Last login: Mon Jun 19 07:40:06 2023 from 10.0.2.2
 ```
-- **1.Определение алгоритма с наилучшим сжатием**
-Смотрим список всех блочных устройств
+**1. Определение алгоритма с наилучшим сжатием**
+- Смотрим список всех блочных устройств
 ```bash
 vagrant@zfs:~\[vagrant@zfs ~]$ sudo -i
 root@zfs:~\[root@zfs ~]# lsblk -f
@@ -198,8 +198,8 @@ otus2  compressratio         2.22x                  -
 otus3  compressratio         3.65x                  -
 otus4  compressratio         1.00x                  -
 ```
-**2.Определение настроек пула**
-Теперь посмотрим на параметры пулов. Скачиваем и распаковываем в домашнем каталоге архив
+**2. Определение настроек пула**
+- Теперь посмотрим на параметры пулов. Скачиваем и распаковываем в домашнем каталоге архив
 ```bash
 root@zfs:~\[root@zfs ~]# wget -O archive.tar.gz --no-check-certificate 'https://drive.google.com/u/0/uc? 
 id=1KRBNW33QWqbvbVHa3hLJivOAt60yukkg&export=download'
@@ -345,8 +345,8 @@ root@zfs:~\[root@zfs ~]# zfs get shecksum otus
 NAME  PROPERTY  VALUE      SOURCE
 otus  checksum  sha256     local
 ```
-**3.Работа со снапшотом, поиск сообщения от преподавателя**
-Скачаем файл, указанный в задании:
+**3. Работа со снапшотом, поиск сообщения от преподавателя**
+- Скачаем файл, указанный в задании:
 ```bash	
 root@zfs:~\[root@zfs ~]# wget -O otus_task2.file --no-check-certificate "https://drive.google.com/u/0/uc 
 ?id=1gH8gCL9y7Nd5Ti3IRmplZPF1XjzxeRAG&export=download"
