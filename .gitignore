@@ -14,3 +14,6 @@ day0X/
 packer_cache/
 day01/playbooks/main.yml
 day03/.vagrant/
+day04/.vagrant/
+day04/disks/
+packer_cache/
