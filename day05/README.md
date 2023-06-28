@@ -184,7 +184,6 @@ vagrant@nfss:/srv/share/upload\[vagrant@nfss upload]$ ls  ./test.txt
 test.txt
 ```
 Перегружаем оба сервера, залогиниваемся на сервер nfss
-
 ```bash
 shutdown -r
 broadcast message from root@nfss (Wed 2023-06-28 10:00:28 EDT):
@@ -196,7 +195,9 @@ Connection to 127.0.0.1 closed.
 
 service@deb03:~/linuxext/day05$ vagrant ssh nfss
 Last login: Wed Jun 28 09:31:59 2023 from 10.0.2.2
-
+```
+Создаем финальный файл для проверки final_check.txt
+```bash
 vagrant@nfss:~\[vagrant@nfss ~]$ cd /srv/share/upload/
 vagrant@nfss:/srv/share/upload\[vagrant@nfss upload]$ touch ./final_check.txt
 vagrant@nfss:/srv/share/upload\[vagrant@nfss upload]$ ls -la ./final_check.txt 
@@ -206,7 +207,7 @@ vagrant@nfss:/srv/share/upload\[vagrant@nfss upload]$ ls -la ./final_check.txt
 ```bash
 service@deb03:~/linuxext/day05$ vagrant ssh nfsc
 ```
-Проверяем доступность сетевого ресурса и созданного файла
+Проверяем доступность сетевого ресурса и созданного файла final_check.txt
 ```bash
 vagrant@nfsc:/mnt/upload\[vagrant@nfsc upload]$ ls -la
 итого 4
