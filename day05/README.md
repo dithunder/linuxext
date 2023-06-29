@@ -222,3 +222,4 @@ vagrant@nfsc:/mnt/upload\[vagrant@nfsc upload]$ exit
 ```bash
 service@deb03:~/linuxext/day05$ vagrant destroy
 ```
+Корректируем Vagrantfile для автоматического запуска скриптов
